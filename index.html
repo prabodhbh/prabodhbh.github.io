@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CBSE Results</title>
+	<link rel="stylesheet" type="text/css" href="images/style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <script language="javascript" type="text/javascript">
+    function dynamicdropdown(listindex)
+    {
+        switch (listindex)
+        {
+        case "Class 10" :
+            document.getElementById("status").options[0]=new Option("Select Exam","");
+            document.getElementById("status").options[1]=new Option("Secondary School Examination 2018","open");
+            document.getElementById("status").options[2]=new Option("Secondary School Examination 2018 Compartment","delivered");
+            break;
+        case "Class 12" :
+            document.getElementById("status").options[0]=new Option("Select Exam","");
+            document.getElementById("status").options[1]=new Option("Senior School Certificate Examination 2018","open");
+            document.getElementById("status").options[2]=new Option("Senior School Certificate Examination 2018 - Compartment ","delivered");
+            document.getElementById("status").options[3]=new Option("UGC NET EXAMINATION","shipped");
+            document.getElementById("status").options[4]=new Option("NEET(UG)","shipped");
+            document.getElementById("status").options[5]=new Option("Joint Entrance Examination","shipped");
+            document.getElementById("status").options[5]=new Option("BSE - UGC NET EXAMINATION","shipped");
+            break;
+        }
+        return true;
+    }
+    </script>
+
+</head>
+<body>
+	<div class="header">
+		<img src="images/1.webp" class="img">
+    	<p class="hindi"> केंद्रीय माध्यमिक शिक्षा बोर्ड </p>
+    	<p class="CBSE"> Central Board of Secondary Education </p>
+	</div>
+
+	<div class="bod">
+
+	<div class="dropdown">
+
+    <div class="column">
+    <div class="category_div" id="category_div">
+
+        <select id="source" name="source" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+        <option value="">Select Grade</option>
+        <option value="Class 10">Class 10</option>
+        <option value="Class 12">Class 12</option>
+        </select>
+    </div>
+    </div>
+        
+    <div class="column">
+    <div class="sub_category_div" id="sub_category_div">
+        <script type="text/javascript" language="JavaScript">
+        document.write('<select name="status" id="status"><option value="">Select Exam</option></select>')
+        </script>
+        <noscript>
+        <select id="status" name="status">
+            <option value="open">Secondary School Examination 2018 Compartment</option>
+            <option value="delivered">CBSE - Class X Examination</option>
+        </select>
+        </noscript>
+    </div>
+    </div>
+    
+    <div class="column">
+    <div class="button">
+        <a href="page3.html"><input type="submit" value="Go" class="go"></a>
+    </div>
+    </div>
+    </div>
+    
+	<div class="results">
+		<a href="page2.html"><p>ALL RESULTS</p></a>
+		<a href="page2.html"><div class="arrow-down"></div></a>
+    </div>
+
+	</div>
+
+</body>
+</html>
